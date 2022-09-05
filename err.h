@@ -17,8 +17,6 @@ extern char *__progname;
 
 #undef LACK_PROGNAME
 
-#define progname __progname
-
 #include <stdarg.h>
 
 void vwarn(const char *fmt, va_list args);
@@ -37,6 +35,8 @@ void errx(int eval, const char *fmt, ...);
 #include <stdlib.h>
 #include <string.h>
 #include <errno.h>
+
+#define progname __progname
 
 void vwarn(const char *fmt, va_list args)
 {
