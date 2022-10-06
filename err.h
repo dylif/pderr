@@ -19,8 +19,8 @@ extern char *__progname;
 
 #include <stdarg.h>
 
-#ifndef eprintf
-#define eprintf(format, ...) fprintf(stderr, format, ##__VA_ARGS__)
+#ifndef EPRINTF
+#define EPRINTF(format, ...) fprintf(stderr, format, ##__VA_ARGS__)
 #endif
 
 void vwarn(const char *fmt, va_list args);
